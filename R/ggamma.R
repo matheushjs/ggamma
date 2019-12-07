@@ -76,7 +76,7 @@
 #' legend("right", c("PDF", "CDF"), col=c(2, 4), lwd=4);
 #'
 #' r = rgamma(n = 100, 2, 2);
-#' lik = function(params) -sum(dggamma(r, params[1], params[2], params[3], log=T));
+#' lik = function(params) -sum(dggamma(r, params[1], params[2], params[3], log=TRUE));
 #' optPar = optim(lik, par=c(1, 1, 1), method="L-BFGS", lower=0.00001, upper=Inf)$par;
 #' x = seq(0.001, 5, length=1000);
 #' plot(x, dgamma(x, 2, 2), type="l", col=2, lwd=4, ylim=c(0, 1));
