@@ -35,7 +35,7 @@
 #'
 #' Cumulative density function
 #' \deqn{
-#'    F(x) = \frac{\gamma(k, (x/a)^p)}{\Gamma(k)}
+#'    F(x) = \frac{\gamma(k, (x/a)^b)}{\Gamma(k)}
 #' }
 #'
 #' The above function can be written in terms of a \eqn{Gamma(\alpha, \beta)}.
@@ -43,7 +43,7 @@
 #' then the cumulative density function of the generalized gamma distribution can be
 #' written as
 #' \deqn{
-#'    F(x) = F_T\bigg(\frac{x^b}{a}\bigg)
+#'    F(x) = F_T( (x/a)^b )
 #' }
 #' which allows us to write the quantile function of the generalized gamma in terms of
 #' the gamma one (\eqn{Q_T(u)} is the quantile function of \eqn{T})
@@ -86,7 +86,7 @@ dggamma = function(x, a, b, k, log=F){
 #' @export
 
 pggamma = function(q, a, b, k, lower.tail = TRUE, log.p = FALSE){
-	cumProb = pgamma(q**b / a, shape=k, rate=1); # shape is alpha, rate is beta
+	cumProb = pgamma( (q / a)**b, shape=k, rate=1); # shape is alpha, rate is beta
 	if(!lower.tail) cumProb = 1 - cumProb;
 	if(log.p) cumProb = log(cumProb);
 	return(cumProb);
