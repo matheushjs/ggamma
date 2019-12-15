@@ -26,10 +26,19 @@ elf.test = function(n = 10000){
 	return( sum(dggamma(x, a, b, c, log=T)) );
 }
 
+rmutil.test = function(n = 10000){
+	x = runif(0, 10, n=n);
+	a=1;
+	b=1;
+	c=1;
+	return( sum(rmutil::dggamma(x, a, b, c, log=T)) );
+}
+
 result = microbenchmark(
 	flexsurv.test(),
 	flexsurv.test.orig(),
 	elf.test(),
+	rmutil.test(),
 	unit="ms",
 	times=1000,
 	control=list(warmup=100)
