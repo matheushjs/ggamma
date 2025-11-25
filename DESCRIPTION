@@ -1,6 +1,6 @@
 Package: ggamma
 Title: Generalized Gamma Probability Distribution
-Version: 1.0.1
+Version: 1.0.2
 Authors@R: c(
     person(given = "Matheus H. J.",
            family = "Saldanha",
@@ -17,7 +17,7 @@ Encoding: UTF-8
 LazyData: true
 URL: https://mjsaldanha.com/posts/ggamma
 BugReports: https://github.com/matheushjs/ggamma/issues
-RoxygenNote: 7.0.1
+RoxygenNote: 7.3.3
 Depends: R (>= 3.1.0)
 Suggests:
     testthat, flexsurv
