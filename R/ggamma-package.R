@@ -20,9 +20,6 @@
 #' C++ was not used, as the R code proved itself most efficient.
 #' See the package website page for more details.
 #' 
-#' @docType package
-#' @name ggamma
-#'
 #' @importFrom stats dgamma pgamma qgamma rgamma
 #' @importFrom stats runif
-NULL
+"_PACKAGE"
