@@ -15,7 +15,7 @@ Description: Density, distribution function, quantile function and random genera
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-URL: https://mjsaldanha.com/posts/ggamma
+URL: https://github.com/matheushjs/ggamma
 BugReports: https://github.com/matheushjs/ggamma/issues
 RoxygenNote: 7.3.3
 Depends: R (>= 3.1.0)
